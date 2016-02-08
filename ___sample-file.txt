@@ -1,0 +1,16 @@
+foo
+foo
+"foo"
+START
+bar
+"bar"
+bar
+END
+qux 
+qux 
+"qux"
+START
+foobar 
+foobar 
+foobar 
+END
