@@ -12,5 +12,5 @@ qux
 START
 foobar 
 foobar 
-foobar 
+foobar
 END
