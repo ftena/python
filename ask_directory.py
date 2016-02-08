@@ -1,6 +1,11 @@
-# Python 3
-# Ask for a output directory tkinter, the standard Python interface
-# to the Tk GUI toolkit.
+#!/usr/bin/env python
+
+"""
+Python 3.
+
+Ask for a output directory tkinter, the standard Python interface
+to the Tk GUI toolkit.
+"""
 
 import tkinter as tk
 from tkinter import filedialog

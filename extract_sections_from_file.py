@@ -1,7 +1,11 @@
-# Python 3
+#!/usr/bin/env python
 
-# Read a text file and copy the contents between two tags.
-# In this example the tags are START and END.
+"""
+Python 3.
+
+Read a text file and copy the contents between two tags.
+In this example the tags are START and END.
+"""
 
 import os
 import re

@@ -1,6 +1,10 @@
-# Python 3
+#!/usr/bin/env python
 
-# Read a text file replace " by '
+"""
+Python 3.
+
+Read a text file replace " by '
+"""
 
 import os
 
