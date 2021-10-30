@@ -1,4 +1,3 @@
-
 import random
 import time
 
@@ -9,7 +8,7 @@ broker = 'broker.emqx.io'
 port = 1883
 topic = "python/mqtt"
 # generate client ID with pub prefix randomly
-client_id = 'python-mqtt-%s' % {random.randint(0, 1000)}
+client_id = 'python-mqtt-{}'.format(random.randint(0, 1000))
 username = 'emqx'
 password = 'public'
 
@@ -26,26 +25,27 @@ def connect_mqtt():
     client.connect(broker, port)
     return client
 
+
 def publish(client):
     msg_count = 0
-    
     while True:
         time.sleep(1)
-        msg = "messages: %s" % msg_count
+        msg = "messages: {}".format(msg_count)
         result = client.publish(topic, msg)
         # result: [0, 1]
         status = result[0]
         if status == 0:
-            print("Send msg %s to topic %s" % (msg, topic))
+            print("Send `{}` to topic `{}`".format(msg, topic))
         else:
-            print("Failed to send message to topic %s" % topic)
+            print("Failed to send message to topic {}".format(topic))
         msg_count += 1
+
 
 def run():
     client = connect_mqtt()
     client.loop_start()
     publish(client)
 
+
 if __name__ == '__main__':
     run()
-
